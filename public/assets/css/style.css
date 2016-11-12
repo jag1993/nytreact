@@ -1,0 +1,11 @@
+.articles{
+	height:500px;
+	overflow: scroll;
+	width:800px;
+	margin: 0 auto;
+	text-align:center;
+}
+
+.title{
+	text-align:center;
+}
