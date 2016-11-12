@@ -15,7 +15,7 @@ var IndexComponent = React.createClass({
 			<div>
         		 <h2>{article.title}</h2>
         		 <p>{article.summary}</p>
-        		 <button onClick={this.handleClick.bind(this, index)}  value={article}> Add </button>
+        		 <button value={article}> Add </button>
         	</div>
    				 ))}
 			 </div>
