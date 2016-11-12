@@ -13,7 +13,7 @@ app.set('port', (process.env.PORT || 7015));
 app.use(express.static(process.cwd() + '/public'));
 
 
-mongoose.connect('mongodb://localhost/articles');
+mongoose.connect('mongodb://heroku_h5r8hczg:4ceote6j4h2i43u6df8rsc5agq@ds151707.mlab.com:51707/heroku_h5r8hczg');
 var db = mongoose.connection;
 
 db.on('error', function (err) {
