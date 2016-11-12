@@ -18,12 +18,12 @@ router.get('/', function(req, res) {
 
 
 router.get('/scrape', function(req, res) {
-    request('https://www.nytimes.com/', function(error, response, html) {
+    request('https://www.nytimes.com/pages/technology/index.html?hpw&rref&action=click&pgtype=Homepage&module=well-region&region=bottom-well&WT.nav=bottom-well', function(error, response, html) {
         var $ = cheerio.load(html);
-        $('.megaSPanC .theme-summary').each(function(i, element) {
+        $('.columnGroup  .story').each(function(i, element) {
             var result = {};
-            result.title = $(this).find('h2').text();
-            result.summary = $(this).find('.summary').text();
+            result.title = $(this).find('h3').text();
+            result.summary = $(this).find('p').text();
             var entry = new Articles(result);
             entry.save(function(err, doc) {
                 if (err) {
