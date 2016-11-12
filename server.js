@@ -38,3 +38,8 @@ var routes = require('./controllers/articles_controller.js');
 app.use('/', routes);
 
 
+
+
+app.listen(app.get('port'), function () {
+	console.log('App listening on PORT ', app.get('port'));
+});
